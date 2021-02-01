@@ -1,0 +1,35 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+const int SIZE = 1000;
+
+void zadanie()
+{
+	fstream plik("C:\liczby2.txt");
+	
+	int tab[SIZE];
+	
+	for(int i=0; i<1000; i++)
+	plik>>tab[i];
+	plik.close();
+	
+	int naj=0;
+	int pierwszy=0;
+	int ile=0;
+	
+	for(int i=1; i<SIZE; i++)
+	{
+		if(tab[i]>tab[i-1])
+			{
+				ile++;
+			}
+		
+	}
+	cout<<ile;
+}
+
+int main(int argc, char** argv) {
+	zadanie();
+	return 0;
+}
